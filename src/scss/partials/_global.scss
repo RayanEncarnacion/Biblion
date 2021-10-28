@@ -1,0 +1,13 @@
+@use "./variables";
+
+body {
+  font-size: 16px;
+  font-family: variables.$montserrat;
+}
+
+h1,
+h2,
+h3 {
+  font-family: variables.$nunito;
+  font-weight: variables.$ft-semi;
+}
