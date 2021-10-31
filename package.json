@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel public/index.html",
-    "sass": "sass src/scss/main.scss public/main.css",
-    "build": "parcel build public/index.html"
+    "start": "parcel --no-cache public/index.html ",
+    "watch": "sass --watch src/scss/main.scss public/main.css",
+    "prefix": "postcss public/main.css --output public/styles.css",
+    "build": "sass src/scss/main.scss public/main.css && postcss public/main.css --output public/styles.css && parcel build public/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
   },
   "homepage": "https://github.com/RayanEncarnacion/Biblion#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.8",
     "parcel": "^2.0.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
     "sass": "^1.43.4"
   },
   "dependencies": {
