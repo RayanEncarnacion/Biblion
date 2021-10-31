@@ -2,3 +2,17 @@
 @use "partials/fonts";
 @use "partials/variables";
 @use "partials/global";
+@use "partials/mixins";
+@use "partials/utilities";
+@use "components/navigation";
+@use "components/header";
+@use "components/about";
+@use "components/menu";
+@use "components/products";
+@use "components/reviews";
+@use "components/contact";
+@use "components/blogs";
+@use "components/footer";
+@use "mini-components/search-bar.scss";
+@use "mini-components/shopping-cart";
+@use "mini-components/menu-sm";
