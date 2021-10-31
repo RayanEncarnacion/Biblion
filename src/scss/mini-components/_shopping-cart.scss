@@ -53,11 +53,12 @@ nav .shopping-cart {
           transition: all 0.2s ease-in-out;
         }
       }
+    }
 
-      & .accent-btn {
-        width: 100%;
-        color: variables.$light;
-      }
+    & .accent-btn {
+      width: 100%;
+      color: variables.$light;
+      max-width: 300px !important;
     }
   }
 }
