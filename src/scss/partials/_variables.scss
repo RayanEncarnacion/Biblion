@@ -3,12 +3,22 @@
 //Fonts
 $nunito: "Nunito", sans-serif;
 $montserrat: "Montserrat", sans-serif;
+$oswald: "Oswald", sans-serif;
 
 //Font weights
 $ft-light: 400;
-$ft-semi: 600;
+$ft-medium: 500;
+$ft-bold: 800;
 
 // Colors
-$dark: hsl(0, 0%, 10%);
+$dark: hsl(0, 0%, 7%);
 $light: hsl(0, 0%, 97%);
-$accent: hsl(44, 80%, 51%);
+$accent: hsl(44, 79%, 47%);
+$dark-accent: hsl(44, 79%, 40%);
+
+// Media queries
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;

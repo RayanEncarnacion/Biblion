@@ -1,0 +1,65 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+#our-menu {
+  .items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;
+
+    @media (min-width: variables.$md) {
+      gap: 2em;
+    }
+
+    .card {
+      @include mixins.y-padding(2em);
+      border: 2px solid rgba(variables.$light, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+      gap: 1em;
+      min-width: 300px;
+      max-width: 320px;
+
+      img {
+        width: 30%;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 0.95em;
+      }
+
+      small {
+        font-weight: normal;
+        text-decoration: line-through;
+        font-size: 0.7rem;
+      }
+
+      .accent-btn {
+        color: variables.$light !important;
+      }
+
+      //Card hover
+
+      &:hover {
+        background-color: variables.$light;
+        color: variables.$dark;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+#reviews {
+  position: relative;
+
+  & .reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;
+
+    @media (min-width: variables.$md) {
+      gap: 1.5em;
+    }
+    @media (min-width: variables.$lg) {
+      gap: 2em;
+    }
+
+    & .reviews-card {
+      @include mixins.y-padding(2em);
+      padding-left: 1em;
+      padding-right: 1em;
+      border: 2px solid rgba(variables.$light, 0.7);
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      max-width: 350px;
+      gap: 1em;
+      transition: all 0.2s ease-in-out;
+
+      p {
+        margin-top: 1em;
+        font-size: 0.9em;
+      }
+
+      .customer {
+        border-radius: 50%;
+        width: 30%;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+
+      .stars {
+        color: rgb(235, 235, 30);
+        transition: color 0.2s ease-in-out;
+      }
+
+      //Card hover
+
+      &:hover {
+        background-color: variables.$light;
+        color: variables.$dark;
+        transition: all 0.2s ease-in-out;
+
+        & .icons {
+          & i {
+            border: 2px solid variables.$dark;
+            color: variables.$dark;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: variables.$accent;
+              border: 2px solid rgba(variables.$light, 0.7);
+            }
+          }
+        }
+
+        .stars i {
+          color: variables.$accent;
+          transition: color 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

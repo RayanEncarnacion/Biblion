@@ -1,0 +1,95 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+#our-products {
+  .products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;
+
+    @media (min-width: variables.$md) {
+      gap: 2em;
+    }
+
+    .card {
+      @include mixins.y-padding(1em);
+      border: 2px solid rgba(variables.$light, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+      min-width: 300px;
+      max-width: 350px;
+      gap: 1em;
+
+      & .icons {
+        display: flex;
+        gap: 0.5em;
+
+        & i {
+          border: 2px solid rgba(variables.$light, 0.7);
+          padding: 0.4em;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+
+      .stars {
+        color: rgb(235, 235, 30);
+        transition: color 0.2s ease-in-out;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 0.95em;
+      }
+
+      small {
+        font-weight: normal;
+        text-decoration: line-through;
+        font-size: 0.7rem;
+      }
+
+      //Card hover
+
+      &:hover {
+        background-color: variables.$light;
+        color: variables.$dark;
+        transition: all 0.2s ease-in-out;
+
+        & .icons {
+          & i {
+            border: 2px solid variables.$dark;
+            color: variables.$dark;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: variables.$accent;
+              border: 2px solid rgba(variables.$light, 0.7);
+            }
+          }
+        }
+
+        .stars i {
+          color: variables.$accent;
+          transition: color 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

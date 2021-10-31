@@ -1,0 +1,66 @@
+@use "./mixins";
+@use "./variables";
+
+.x-padding {
+  @include mixins.x-padding(1.5em);
+
+  @media (min-width: variables.$sm) {
+    @include mixins.x-padding(2em);
+  }
+  @media (min-width: variables.$md) {
+    @include mixins.x-padding(2.5em);
+  }
+  @media (min-width: variables.$lg) {
+    @include mixins.x-padding(3em);
+  }
+  @media (min-width: variables.$xl) {
+    @include mixins.x-padding(4em);
+  }
+  @media (min-width: variables.$xxl) {
+    @include mixins.x-padding(4.5em);
+  }
+}
+
+.accent {
+  color: variables.$accent;
+}
+
+.accent-btn {
+  @include mixins.x-padding(1.7em);
+  @include mixins.y-padding(0.8em);
+  background-color: variables.$accent;
+  font-weight: 800;
+  max-width: 180px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: variables.$dark-accent;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  @include mixins.y-padding(3.5em);
+
+  @media (min-width: variables.$sm) {
+    @include mixins.y-padding(4em);
+  }
+  @media (min-width: variables.$md) {
+    @include mixins.y-padding(4.5em);
+  }
+}
+
+.section-title {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 1.5em;
+
+  @media (min-width: variables.$md) {
+    margin-bottom: 2em;
+  }
+}

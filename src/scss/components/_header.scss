@@ -1,0 +1,100 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+header {
+  padding-top: 6em;
+  padding-bottom: 4em;
+  background-image: url(/public/images/home-img.jpeg);
+  background-position: left;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media (min-width: variables.$sm) {
+    padding-top: 9em;
+    padding-bottom: 5em;
+  }
+  @media (min-width: variables.$md) {
+    padding-top: 8em;
+    padding-bottom: 6em;
+
+    p.hidden {
+      display: block;
+    }
+  }
+  @media (min-width: variables.$lg) {
+    padding-top: 16em;
+    padding-bottom: 10em;
+    justify-content: start;
+  }
+
+  @media (min-width: variables.$xl) {
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 5em;
+  }
+
+  // Text container
+
+  & .text-container {
+    position: relative;
+    max-width: 1200px;
+    // margin-left: auto;
+    // margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+
+    @media (min-width: variables.$lg) {
+      align-items: flex-start;
+      text-align: left;
+      margin-top: -3em;
+    }
+
+    @media (min-width: variables.$xl) {
+      margin-left: 2em;
+      margin-top: 0;
+      gap: 1.5em;
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+    @media (min-width: variables.$xxl) {
+      margin-left: 4em;
+    }
+
+    h1 {
+      font-size: 2.3em;
+
+      @media (min-width: variables.$xl) {
+        font-size: 3em;
+      }
+    }
+
+    p {
+      font-weight: variables.$ft-medium;
+      max-width: 600px;
+    }
+  }
+
+  // Darken overlay
+
+  .bg-darken {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000000, 0.5);
+
+    @media (min-width: variables.$md) {
+      background-color: rgba(#000000, 0.2);
+    }
+  }
+}

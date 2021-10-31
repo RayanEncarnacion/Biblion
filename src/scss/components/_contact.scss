@@ -1,0 +1,55 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+#contact {
+  img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    min-height: 250px;
+    max-height: 400px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  form {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 300px;
+
+    @media (min-width: variables.$xl) {
+      margin-top: 3em;
+    }
+
+    & h2 {
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    & .inputs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6em;
+      margin-top: 1.5em;
+
+      & > div {
+        border: 2px solid rgba(variables.$light, 0.7);
+        padding: 0.7em;
+
+        & input {
+          background-color: variables.$dark;
+          color: variables.$light;
+          padding-left: 0.5em;
+        }
+      }
+    }
+
+    .accent-btn {
+      margin: 1.5em auto 0;
+    }
+  }
+}

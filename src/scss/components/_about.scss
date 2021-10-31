@@ -1,0 +1,61 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+#about-us {
+  .about-container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: variables.$md) {
+      flex-direction: row;
+      gap: 1.5em;
+
+      & * {
+        width: 100%;
+        align-self: center;
+      }
+    }
+    @media (min-width: variables.$xl) {
+      gap: 2em;
+    }
+    @media (min-width: variables.$xxl) {
+      gap: 3em;
+    }
+
+    img {
+      width: 100%;
+      transition: scale 0.15s linear;
+
+      &:hover {
+        scale: 1.1;
+        transition: scale 0.15s linear;
+      }
+    }
+
+    & .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      h2 {
+        font-size: 1.7em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      .accent-btn {
+        margin-top: 1em;
+
+        @media (min-width: variables.$md) {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

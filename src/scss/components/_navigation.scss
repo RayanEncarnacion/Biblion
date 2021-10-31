@@ -1,0 +1,68 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+nav {
+  @include mixins.y-padding(0.5em);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(variables.$dark, 0.9);
+  border-bottom: 1px solid rgba(variables.$light, 0.5);
+
+  & img {
+    width: 17%;
+    max-width: 70px;
+  }
+
+  & .nav-icons {
+    & > * {
+      margin-left: 0.8em;
+      color: variables.$light;
+      font-size: 1em;
+      cursor: pointer;
+
+      @media (min-width: variables.$sm) {
+        margin-left: 1.2em;
+      }
+      @media (min-width: variables.$md) {
+        margin-left: 1.5em;
+      }
+    }
+
+    & .menu-btn {
+      @media (min-width: variables.$lg) {
+        display: none;
+      }
+    }
+  }
+
+  & .menu-lg {
+    display: none;
+
+    @media (min-width: variables.$lg) {
+      display: block;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+      list-style-type: none;
+
+      & li {
+        transition: color 0.1s ease-in-out;
+
+        &:hover {
+          color: variables.$accent;
+          transition: color 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+}
