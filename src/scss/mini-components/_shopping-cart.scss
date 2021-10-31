@@ -1,0 +1,68 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+nav .shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: variables.$dark;
+  transform: translateX(105%);
+  width: 65%;
+  max-width: 400px;
+  padding: 0 1.5em 1em;
+  background-color: variables.$light;
+  transition: transform 0.3s ease-in-out;
+  font-size: 0.9em;
+
+  & .cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    & .item {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1em;
+      border-bottom: 2px solid rgba(variables.$dark, 0.05);
+      padding: 1em 0.5em;
+      scale: 1;
+      transition: scale 0.2s ease-in-out;
+
+      &:hover {
+        scale: 1.05;
+        transition: scale 0.2s ease-in-out;
+      }
+
+      & img {
+        width: 30%;
+      }
+
+      & i {
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.2s ease-in-out;
+        padding: 5px;
+
+        &:hover {
+          background-color: variables.$accent;
+          color: variables.$light;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      & .accent-btn {
+        width: 100%;
+        color: variables.$light;
+      }
+    }
+  }
+}
+
+.shopping-cart.active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}

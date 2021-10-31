@@ -1,0 +1,44 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+.search {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translateX(105%);
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  background-color: variables.$light;
+  transition: transform 0.3s ease-in-out;
+
+  input {
+    width: 100%;
+    height: 100%;
+    background-color: variables.$light;
+    color: variables.$dark;
+    font-size: 1em;
+
+    &::placeholder {
+      font-size: 0.9em;
+    }
+  }
+
+  i {
+    color: variables.$dark;
+    cursor: pointer;
+
+    &:hover {
+      color: variables.$accent;
+    }
+  }
+}
+
+.search.active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}

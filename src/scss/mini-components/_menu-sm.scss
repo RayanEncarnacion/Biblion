@@ -1,0 +1,39 @@
+@use "../partials/mixins";
+@use "../partials/variables";
+
+.menu-sm {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: variables.$dark;
+  transform: translateX(105%);
+  width: 65%;
+  max-width: 400px;
+  padding: 2em 0;
+  background-color: variables.$light;
+  transition: transform 0.3s ease-in-out;
+  font-size: 0.9em;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    list-style-type: none;
+
+    & li {
+      transition: color 0.1s ease-in-out;
+
+      &:hover {
+        color: variables.$accent;
+        transition: color 0.1s ease-in-out;
+      }
+    }
+  }
+}
+
+.menu-sm.active {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
