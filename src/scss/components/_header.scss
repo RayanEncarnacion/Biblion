@@ -4,7 +4,7 @@
 header {
   padding-top: 7em;
   padding-bottom: 4em;
-  background-image: url(/public/images/home-img.jpeg);
+  background-image: url(/public/images/chris-lawton-zvKx6ixUhWQ-unsplash.jpg);
   background-position: left;
   background-size: cover;
   display: flex;
@@ -25,15 +25,12 @@ header {
     }
   }
   @media (min-width: variables.$lg) {
-    padding-top: 16em;
-    padding-bottom: 10em;
-    justify-content: start;
+    padding-top: 10em;
+    padding-bottom: 3em;
   }
-
   @media (min-width: variables.$xl) {
-    height: 100vh;
-    padding-top: 0;
-    padding-bottom: 5em;
+    padding-top: 10em;
+    padding-bottom: 6em;
   }
 
   // Text container
@@ -41,8 +38,6 @@ header {
   & .text-container {
     position: relative;
     max-width: 1200px;
-    // margin-left: auto;
-    // margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,13 +46,12 @@ header {
     text-align: center;
 
     @media (min-width: variables.$lg) {
-      align-items: flex-start;
-      text-align: left;
+      align-items: center;
+      text-align: center;
       margin-top: -3em;
     }
 
     @media (min-width: variables.$xl) {
-      margin-left: 2em;
       margin-top: 0;
       gap: 1.5em;
 
@@ -91,10 +85,6 @@ header {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(#000000, 0.5);
-
-    @media (min-width: variables.$md) {
-      background-color: rgba(#000000, 0.2);
-    }
+    background-color: rgba(#000000, 0.8);
   }
 }

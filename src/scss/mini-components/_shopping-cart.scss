@@ -12,7 +12,8 @@ nav .shopping-cart {
   padding: 0 1.5em 1em;
   background-color: variables.$light;
   transition: transform 0.3s ease-in-out;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  text-align: center;
 
   & .cart-items {
     display: flex;
@@ -39,6 +40,15 @@ nav .shopping-cart {
 
       & img {
         width: 30%;
+      }
+
+      p {
+        font-weight: bold;
+        width: 60%;
+
+        & small {
+          font-weight: normal;
+        }
       }
 
       & i {
