@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel --no-cache public/index.html ",
-    "watch": "sass --watch src/scss/main.scss public/main.css",
-    "prefix": "postcss public/main.css --output public/styles.css",
-    "build": "sass src/scss/main.scss public/main.css && postcss public/main.css --output public/styles.css && parcel build public/index.html"
+    "start": "parcel public/index.html ",
+    "build": "sass src/scss/main.scss public/styles.css && postcss public/styles.css --output public/styles.css && parcel build public/index.html"
   },
   "repository": {
     "type": "git",
