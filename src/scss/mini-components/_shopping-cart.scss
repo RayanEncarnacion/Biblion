@@ -67,8 +67,10 @@ nav .shopping-cart {
 
     & .accent-btn {
       width: 100%;
+      padding-top: 1.1em;
       color: variables.$light;
       max-width: 300px !important;
+      font-size: 1em !important;
     }
   }
 }
